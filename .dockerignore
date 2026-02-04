@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+db.sqlite3
+.git
+.gitignore
+venv/
+prd.txt
+notex.txt
+

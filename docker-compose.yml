@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: django_web
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS_URL: "redis://default:bfsRHfJnxhhvfzxUSV3J3uAFFoOKxHvt@redis-19406.c93.us-east-1-3.ec2.cloud.redislabs.com:19406"
+      DJANGO_SETTINGS_MODULE: "project.settings"
+
+  worker:
+    build: .
+    container_name: celery_worker
+    command: celery -A Celery_pro worker -l info
+    volumes:
+      - .:/app
+    environment:
+      REDIS_URL: "redis://default:bfsRHfJnxhhvfzxUSV3J3uAFFoOKxHvt@redis-19406.c93.us-east-1-3.ec2.cloud.redislabs.com:19406"
+      DJANGO_SETTINGS_MODULE: "project.settings"
