@@ -8,7 +8,7 @@ This project is a **Django-based API** for managing orders, products, and stores
 
 ## **Features Implemented**
 
-1. **User & Orders**
+1. ** Orders**
    - Create orders with multiple products.
    - Track inventory per store.
    - Confirm or reject orders based on stock availability.
