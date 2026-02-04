@@ -1,6 +1,6 @@
 
 ````markdown
-#  Project
+# FIS Project
 
 This project is a **Django-based API** for managing orders, products, and stores, with **Celery integration** for asynchronous tasks and **Docker support** for containerization.  
 
@@ -8,7 +8,7 @@ This project is a **Django-based API** for managing orders, products, and stores
 
 ## **Features Implemented**
 
-1. ** Orders**
+1. **User & Orders**
    - Create orders with multiple products.
    - Track inventory per store.
    - Confirm or reject orders based on stock availability.
@@ -63,7 +63,8 @@ This project is a **Django-based API** for managing orders, products, and stores
 ## **Project Structure**
 
 ````
-Project/
+
+FIS_Project/
 ├─ orders/
 │  ├─ models.py
 │  ├─ views.py
@@ -80,6 +81,7 @@ Project/
 ├─ docker-compose.yml
 ├─ requirements.txt
 └─ manage.py
+
 ````
 
 ---
@@ -96,7 +98,7 @@ cd fis-project
 ### **2. Create `.env` for sensitive info**
 
 ```env
-REDIS_URL=redis_url
+REDIS_URL=redis://default:your_redis_password@your_redis_host:port
 EMAIL_RECEIVER=demo@example.com
 EMAIL_PASSWORD=app_password
 EMAIL_HOST=email_host
@@ -174,8 +176,6 @@ celery -A Celery_pro worker -l info
 
 **Author:** Hussein Lawal
 **Date:** February 2026
-
-
 
 
 
