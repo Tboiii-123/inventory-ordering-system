@@ -63,8 +63,7 @@ This project is a **Django-based API** for managing orders, products, and stores
 ## **Project Structure**
 
 ````
-
-FIS_Project/
+Project/
 ├─ orders/
 │  ├─ models.py
 │  ├─ views.py
@@ -81,7 +80,6 @@ FIS_Project/
 ├─ docker-compose.yml
 ├─ requirements.txt
 └─ manage.py
-
 ````
 
 ---
@@ -98,7 +96,7 @@ cd fis-project
 ### **2. Create `.env` for sensitive info**
 
 ```env
-REDIS_URL=redis://default:your_redis_password@your_redis_host:port
+REDIS_URL=redis_url
 EMAIL_RECEIVER=demo@example.com
 EMAIL_PASSWORD=app_password
 EMAIL_HOST=email_host
@@ -181,7 +179,4 @@ celery -A Celery_pro worker -l info
 
 ---
 
-If you want, I can also **make a version with GitHub badges** (Python, Docker, Celery) at the top so it looks super professional on your repo.  
 
-Do you want me to do that too?
-```
