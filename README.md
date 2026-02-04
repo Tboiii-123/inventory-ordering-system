@@ -102,10 +102,9 @@ REDIS_URL=redis://default:your_redis_password@your_redis_host:port
 EMAIL_RECEIVER=demo@example.com
 EMAIL_PASSWORD=app_password
 EMAIL_HOST=email_host
-
 ```
 
-
+> **Note:** Do not commit `.env` to GitHub.
 
 ---
 
@@ -141,9 +140,7 @@ docker-compose up
   * Ordered items
   * Total quantity
 
-**Celery Task**
-
-* After order creation, Celery runs `send_order_confirmation` in the background.
+**Celery Task:** After order creation, Celery runs `send_order_confirmation` asynchronously.
 
 ---
 
@@ -172,7 +169,7 @@ celery -A Celery_pro worker -l info
 
 * Add authentication for users.
 * Add Celery Beat for scheduled tasks (e.g., daily inventory reports).
-* Move settings sensitive info to `.env` using `django-environ`.
+* Move sensitive settings to `.env` using `django-environ`.
 * Replace `print` statements in Celery task with real email notifications.
 
 ---
@@ -182,6 +179,9 @@ celery -A Celery_pro worker -l info
 
 ```
 
+---
 
+If you want, I can also **make a version with GitHub badges** (Python, Docker, Celery) at the top so it looks super professional on your repo.  
 
-
+Do you want me to do that too?
+```
