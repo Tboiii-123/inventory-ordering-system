@@ -175,7 +175,7 @@ celery -A Celery_pro worker -l info
 **Author:** Hussein Lawal
 **Date:** February 2026
 
-```
+
 
 
 
