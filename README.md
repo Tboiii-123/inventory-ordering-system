@@ -177,6 +177,6 @@ celery -A Celery_pro worker -l info
 
 ```
 
----
+
 
 
